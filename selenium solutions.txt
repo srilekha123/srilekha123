@@ -1,0 +1,127 @@
+1)what is the use of framework in automation testing
+  A) The automation Framework is used to provide the execuitable  environment to run the tests.It is defined as set of assumptions,practices, & concepts that constitute
+work platform for automated test scripts
+ex: It is said as jar file in java is known as framework in java
+     In C++ it is said that DLL is the framework
+In selenium when ever i create a project i use package/classes to create the set of assumptions/concepts & practices.
+    
+
+2)what are things u consider/keep in framework 
+      Ans: Create classes/methods to handle exceptions/custom reports, reading data from database, excel file
+
+
+
+3)different types of frameworks we have in selenium/qtp
+      Ans: Data driven, hybrid, keyword driven, BDD
+
+
+4)what is data driven frame work and when do we use it?
+      Ans: to test same functionality more than once with different set of data/input data
+              We store the test data in external files (excel/csv) or table.
+
+
+              
+5)what is keyword frame work and when do we use it?
+    Ans)The keyword frame work is known as functional automation testing framework.It is also known as test driven framework or action based framework. it divides the test case
+into four parts, Hence the first one is known as test step then the second is known as object of the test step, and third one is known as action on the test object then final fourth is known as test
+data for the test object.
+
+6)what is hybrid framework and when do we use it?
+  Ans) It is known as the customised framework since it is known as the combination of the keyword frame work and data driven framework, hence it performs the
+ functionality of keyword and data driven frameworks.
+
+
+7)what is POM and modular framework?
+   Ans)Modular frame work is said to have different data scripts this data scripts contains different modules,it uses hierarcial method to use large test cases
+ these data scripts create an abstract to hide the components from rest of the application
+ hence if there is any change in the certain part of the application it does not effect the other components
+ POM- Page oject model it represents the model of the page/screen of the  application  as object so called as page oject. Hence all the functions performed in the screen/page of the
+      application will encapsulate in page oject class of the screen.hence if there any changes in the UI,it only affects the page object class of the screen thus 
+      abstracting the changes fro te testclass.   
+
+
+8)what is testng and junit?
+  ANS)junit is the basic testing framework tha java uses. In selenium when ever we want to do testing and if we want to test with java youcan use junit to write tests in java
+and then we can hook it up with selenium. there are many testing frame work developed by Junit.  Testng is an unit Testinng frame work and it  is an open source framework. It is mainly used ffor parametarization
+data driven testing and parallell execution. It is designed to cover all types of tests such as unit,functional, data driven, end to end and integration.
+
+ 
+
+9)writing unit test cases with testng
+  ANS)Step1: Extend a subclass of junit.framework.TestCase:
+Step 2: If two or more test methods use a common set of test objects (called test fixtures), declare the test fixtures as instance variables.
+Step 3: Initialize the text fixture.
+Step 4: Write the test methods for this TestCase. All the test methods must be named testXxx(),
+Step 5: You can now run the TestCase, using JUnit-provided TestRunner
+Step 6: If there are many TestCases (could be written by different people), you can put them together into a TestSuite and run all the TestCases at once.  
+
+10)what are important elements in testng.xml
+ANS) Suite is the top level element in testng configaration and is defined as one XML file,suit contain one or more test elements 
+      Test contains more than one classses in it
+      package is the another element.
+
+
+11)what are different annotations in testng and junit
+ANS)   Annotations in Junit
+       @Test -	The annotated method is to be run as a test method.
+       @Before  -	The annotated method is to be run before EACH of the test method.
+       @After	 -      The annotated method is to be run after EACH of the test method.
+       @BeforeClass-    The annotated method is to be run ONCE before any of the test method.
+       @AfterClass-	The annotated method is to be run ONCE after all the test methods.
+       @Ignore   -	Ignore (don't run) the test method. This is a convenient way to mark out a test method (e.g. after some code changes that fail this test.)
+       @Rule-    	[TODO]
+      
+     Annotations in testng
+     @Test                       -	 Mark a method (or class) as a test method (or class).
+     @BeforeSuite / @AfterSuite - 	Run ONCE before and after all tests in this suite.
+     @BeforeClass / @AfterClass	-        Run ONCE before and after all tests in this class.
+     @BeforeMethod / @AfterMethod -	 Run before and after EACH @Test method.
+     @BeforeTest / @AfterTest	-        [TODO]
+     @BeforeGroups / @AfterGroups -	 [TODO]
+     @Parameters	          -       Mark this test method is to get its parameters from the XML description file.
+     @DataProvider	          -       Mark the method, which return an Object[][], as data source for a test method.
+     @Factory	                  -       [TODO]
+     @Listeners	                  -        [TODO]         
+
+
+
+
+12)what is group and suite and parallel execution in testng
+ANS) GROUP-Testng allows us to perform sophesticated groupings of test methods, Hence it also allows us to execute any set of groups while execluding other set of groups.
+     Prallel Execution -Testng allows us to run in parallel or multi-threaded mode, this mean that based on the test suite configaration, different threads are started simultaneously and
+     the test methods are executed in them. 
+     suite - A test suit is a collection of test cases intended to test behaviour or set of behaviours of a software programme. It allows flexible configaration of the
+             tests to be run.
+13)how to decide which test cases needs to be automated
+    ANS)The test cases which are used in continuos integration testing needs automation since every small change we are able to re-execute all regressions hence make sure 
+     we arent breaking anything
+    
+14)what are the steps in automation testing or when do we automation testing?
+       Ans: write manual test cases (if they are not there)
+                out of all manual test cases we will pick test cases that are of regression testing 
+                        (test cases that needs to be executed)  
+                put all positive scenarios in regression 
+                we dont put any UI related changes in regression testing
+
+15) what is the use of dataprovider annotation
+   ANS)Mark the method, Wich returns an an object as a data source for the test  method
+
+     
+16) Difference between junit and testng?
+  ANS) Both Junit and testng are very popular unit testing frame works in java.Difference between junit and testng is there scope. Junit is the unit testing framework
+     while testng address testing at higher level and testng since it has wider goal and hence it does not only does unit testing but also supports acceptence and integration testing as well
+ 
+
+
+
+17) how to generate reports using testng?
+ ANS) STEP1: create a simple java class and write some test cases
+      STEP2: To run the script simply right click and select testng
+      STEP3: Hence test cases will start execution in the console window u get the result
+                        
+                         GENERATING HTML REPORT
+      STEP4: Right click on java project, then u can see refresh option so refresh  your project then you will see report folder directly
+      STEp5: Once it is refreshed you will see different folders as Test output, default test.html, emailable-report.html, index.html. Hence you can open all these
+             folders and check the results.
+
+      
